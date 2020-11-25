@@ -14,11 +14,11 @@ This LUA suite of applications provides a list of all DU recipes, displays their
 
 4) Now we need to link the databank to the second PB, in the following order: the 8 database databanks, followed by the menu databank and finally the comms datbank.  This PB acts as a 'server' for queries from the display PB.
 
-5) Next copy the content of the XXX file in this repository (again using the LUA Paste Cope in game function) into the second PB.
+5) Next copy the content of the Server.txt file in this repository (again using the LUA Paste Cope in game function) into the second PB.
 
 6) Finally, we need to link the screens and databanks to the third PB, in the following order: menu databank, screen 1, 2, 3, the stores databank, the cooms databank
 
-7) Then copy the content of the XXX file in this repository (again using the LUA Paste Cope in game function) into the third PB.
+7) Then copy the content of the Client.txt file in this repository (again using the LUA Paste Cope in game function) into the third PB.
 
 # Running the Application
 
