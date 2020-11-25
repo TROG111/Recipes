@@ -14,23 +14,25 @@ This LUA suite of applications provides a list of all DU recipes, displays their
 
 4) Now we need to link the databank to the second PB, in the following order: the 8 database databanks, followed by the menu databank and finally the comms datbank.  This PB acts as a 'server' for queries from the display PB.
 
-5) Next copy the content of the Server.txt file in this repository (again using the LUA Paste Cope in game function) into the second PB.
+5) Next copy the content of the Server.txt file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
 
 6) Finally, we need to link the screens and databanks to the third PB, in the following order: menu databank, screen 1, 2, 3, the stores databank, the cooms databank
 
-7) Then copy the content of the Client.txt file in this repository (again using the LUA Paste Cope in game function) into the third PB.
+7) Then copy the content of the Client.txt file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
 
 # Running the Application
 
 The UI should be relatively straight forward.
 
-1) Filter the content of the recipe list using the 4 buttons below the list (All/Elements/Consumable/Parts)
+1) Run the server PB, then launch the client PB.  After the client PB has loaded the recipe menus then recipe list will be displayed on the main screen.
 
-2) Scroll up/down through the list of recipes using the arrow buttons below the list.
+2) Filter the content of the recipe list using the 4 buttons below the list (All/Elements/Consumable/Parts)
 
-3) Click on a specific recipe in the list displayed to select it - the recipe details will then be displayed (including the ore costs on the third screen)
+3) Scroll up/down through the list of recipes using the arrow buttons below the list.
 
-4) Click on a specific ingredient from the list of ingredients (to the right of the recipe list) to select it and display its details on the second screen.
+4) Click on a specific recipe in the list displayed to select it - the recipe details will then be displayed (including the ore costs on the third screen)
+
+5) Click on a specific ingredient from the list of ingredients (to the right of the recipe list) to select it and display its details on the second screen.
 
 # Integrating with a stores monitor application
 
