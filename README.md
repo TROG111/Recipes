@@ -4,7 +4,9 @@ LUA application for DU which displays recipes and ingredients.  Requires 11 data
 This LUA suite of applications provides a list of all DU recipes, displays their details and a list of their required ingredients.  For each ingredient, the application displays the number of items required and (if you have a databank containing your container/stores information) the quantity of the relevant stock you have in store.  Recipes can be filtered by All / Elements / Condumables / Parts.  Clicking on an ingredient for a recipe will display the details of that ingredient in the 2nd screen, along with a list of its ingredients (requirement number and stock).  A third screen displays the total ore quantities (for each ore type) needed to manufacture the recipe selected and an estimate cost (this is based on manual entry of the current market prices for each ore).
 
 # Installation:
-(it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank)
+(it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank).
+
+You will also need to make sure that you have the dkjson.lua libary script in your DU lua library.
 
 1) The first Programming Board will be used to upload the database.  Link this PB (in the following order) to the 8 database databank, then to the menu databank.
 
