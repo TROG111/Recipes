@@ -52,6 +52,11 @@ maps the 'Basic Robotic Arm S' recipe in the application with a variable in my s
 
 # Good Luck
 
+# Version
+
+1_0_1:  1) fixed problem that stopped recipes with t4 ore from calculating the ore cost correctly. 2) trying to avoid the cpu overload error when first recipes selected are complex, doing this by initialising/prepopulating the cache with common recipes during server startup.
+
+
 
 
 
