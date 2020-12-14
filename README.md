@@ -10,7 +10,7 @@ You will also need to make sure that you have the dkjson.lua libary script in yo
 
 1) The first Programming Board will be used to upload the database.  Link this PB (in the following order) to the 8 database databank, then to the menu databank.
 
-2) Copy the content of the Database.txt file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.  Due to limitation in DU the code in this PB is not saved when you log out - but dont worry, we will only use this PB once during the database setup.
+2) Copy the content of the Database.txt file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.
 
 3) Execute the code on this PB - it will take a minute or so to run completely (at the end it will list the databank and database IDs linked to the PB for you reference)
 
