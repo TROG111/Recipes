@@ -68,6 +68,8 @@ maps the 'Basic Robotic Arm S' recipe in the application with a variable in my s
 
 1_2_0:  1) this pre-release update allows user to input (via LUA Parameters) their Productivity Talent Levels.  The cost (ore costs) displayed are for a single litre/unit of the recipe product with the productivity bonus applied.  I have so far implemented Productivity Talents for all recipe except Scrap and Honeycomb.  Talent Productivity Levels can be changed via the LUA Parameters on the Server PB.
 
+1_3_0:  1) Contains the new (DU 0.23) Uncommon, Advanced and Rare industries and XL containers
+
 
 
 
