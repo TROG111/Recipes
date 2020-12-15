@@ -40,6 +40,8 @@ The UI should be relatively straight forward.
 
 7) You can set up a user defined menu filter (for example to only display all the recipes that contain the word 'engine') by sending a command line instruction to the application (via the LUA chat).  For example, a) press 'enter' and go to the LUA chat panel; b) type 'filter' and the string that you want to use as your user defined filter (e.g.'filter engine'); c) you will notice that the 'blank' menu filter button on the main screen now contains your search term; d) press this menu filter to only see recipes with the word 'engine' in them.
 
+8) you can add the current market prices for ores (via LUA parameters on the client PB) and these will be used to calculate the recipe cost
+
 # Integrating with a stores monitor application
 
 In the installation above we used a 'dummy' stores databank.  If you already have a LUA application that populates a databank with information about your factory stores, then this can be integrated with this recipe application.  Doing so will provide additional information for ingredient - the quantity of that ingredient you have in stores.
@@ -64,7 +66,7 @@ maps the 'Basic Robotic Arm S' recipe in the application with a variable in my s
 
 1_1_1:  1) fixed a database issue which caused some recipes to be duplicated;  2) added LUA parameters to set the background colours; 3) fixed a fault in the caching algorithm
 
-1_2_0:  1) this pre-release update allows user to input (via LUA Parameters) their Productivity Talent Levels.  The cost (ore costs) displayed are for a single litre/unit of the recipe product with the productivity bonus applied.  I have so far implemented Productivity Talents for all recipe except Scrap and Honeycomb.
+1_2_0:  1) this pre-release update allows user to input (via LUA Parameters) their Productivity Talent Levels.  The cost (ore costs) displayed are for a single litre/unit of the recipe product with the productivity bonus applied.  I have so far implemented Productivity Talents for all recipe except Scrap and Honeycomb.  Talent Productivity Levels can be changed via the LUA Parameters on the Server PB.
 
 
 
