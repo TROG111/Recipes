@@ -62,7 +62,7 @@ maps the 'Basic Robotic Arm S' recipe in the application with a variable in my s
 
 1_1_0:  1) now supports DU 0.23; 2) can provie schematic and talen information; 3) allows user defined menu filters; 4) some bug fixes
 
-1_1_1:  1) fixed a database issue which caused some recipes to be duplicated;  2) added LUA parameters to set the background colours
+1_1_1:  1) fixed a database issue which caused some recipes to be duplicated;  2) added LUA parameters to set the background colours; 3) fixed a fault in the caching algorithm
 
 
 
