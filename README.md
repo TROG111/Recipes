@@ -72,6 +72,8 @@ Users upgrading from a previous version of the recipe application will need to c
 
 Some users have identified that they do not have a copy of dksjon.lua in their library folder.  This can be provided on request if you dont have it.
 
+I believe that the time data for the new uncommon, advanced and rare industry recipes is incorrect - appologies, I will fix it soon.
+
 # Version
 
 1_0_1:  1) fixed problem that stopped recipes with t4 ore from calculating the ore cost correctly. 2) trying to avoid the cpu overload error when first recipes selected are complex, doing this by initialising/prepopulating the cache with common recipes during server startup.
