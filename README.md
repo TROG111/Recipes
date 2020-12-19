@@ -10,17 +10,17 @@ You will also need to make sure that you have the dkjson.lua libary script in yo
 
 1) The first Programming Board will be used to upload the database.  Link this PB (in the following order) to the 8 database databank, then to the menu databank.
 
-2) Copy the content of the Database.txt file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.
+2) Copy the content of the latest (1_3_0) Database file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.
 
 3) Execute the code on this PB - it will take a minute or so to run completely (at the end it will list the databank and database IDs linked to the PB for you reference)
 
 4) Now we need to link the databank to the second PB, in the following order: the 8 database databanks, followed by the menu databank and finally the comms datbank.  This PB acts as a 'server' for queries from the display PB.
 
-5) Next copy the content of the Server (version 1_1_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
+5) Next copy the content of the Server (version 1_3_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
 
 6) Finally, we need to link the screens and databanks to the third PB, in the following order: menu databank, screen 1, 2, 3, the stores databank, the cooms databank
 
-7) Then copy the content of the Client (version 1_1_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
+7) Then copy the content of the Client (version 1_3_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
 
 # Running the Application
 
