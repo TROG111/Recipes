@@ -1,7 +1,11 @@
 # Recipes
 LUA application for DU which displays recipes and ingredients.  Requires 11 databanks, 3 screens (recommend m size), 3 Programme Boards.
 
-This LUA suite of applications provides a list of all DU recipes, displays their details and a list of their required ingredients.  For each ingredient, the application displays the number of items required and (if you have a databank containing your container/stores information) the quantity of the relevant stock you have in store.  Recipes can be filtered by All / Elements / Condumables / Parts.  Clicking on an ingredient for a recipe will display the details of that ingredient in the 2nd screen, along with a list of its ingredients (requirement number and stock).  A third screen displays the total ore quantities (for each ore type) needed to manufacture the recipe selected and an estimate cost (this is based on manual entry of the current market prices for each ore).
+This LUA suite of applications provides a list of all DU recipes, displays their details and a list of their required ingredients.  For each ingredient, the application displays the number of items required and (if you have named your factory containers and mapped these to the corresponding ingredient name - see instructions below) the quantity of the relevant stock you have in store.  Recipes can be filtered by All / Elements / Condumables / Parts / a user defined search field.  Clicking on an ingredient for a recipe will display the details of that ingredient in the 2nd screen, along with a list of its ingredients (requirement number and stock).  A third screen displays the total ore quantities (for each ore type) needed to manufacture the recipe selected and an estimate cost (this is based on manual entry of the current market prices for each ore).  Third 3rd screen can also display the proficiency talents needed to manufacture the recipe and the industry schematics needed (and also idenfies if you have any of these in your current factory industries)
+
+# Latest Version
+
+The latest support version is 1_3_0
 
 # Installation:
 (it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank: if you dont have a stores databank in your factory simply use an another empty database).
@@ -10,23 +14,23 @@ You will also need to make sure that you have the dkjson.lua libary script in yo
 
 1) The first Programming Board will be used to upload the database.  Link this PB (in the following order) to the 8 database databank, then to the menu databank.
 
-2) Copy the content of the latest (1_3_0) Database file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.
+2) Copy the content of the latest Database file in this repository and (using the rightclick/advanced/Paste Lua Code in game option for the PB) paste the content of the file into the first PB.
 
 3) Execute the code on this PB - it will take a minute or so to run completely (at the end it will list the databank and database IDs linked to the PB for you reference)
 
 4) Now we need to link the databank to the second PB, in the following order: the 8 database databanks, followed by the menu databank and finally the comms datbank.  This PB acts as a 'server' for queries from the display PB.
 
-5) Next copy the content of the Server (version 1_2_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
+5) Next copy the content of the latest Server file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
 
-6) Finally, we need to link the screens and databanks to the third PB, in the following order: menu databank, screen 1, 2, 3, the stores databank, the cooms databank
+6) Finally, we need to link the screens and databanks to the third PB, in the following order: core,  menu databank, screen 1, 2, 3, and the cooms databank
 
-7) Then copy the content of the Client (version 1_2_0 is the current version) file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
+7) Then copy the content of the latest Client file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
 
 # Running the Application
 
 The UI should be relatively straight forward.
 
-1) Run the server PB, then launch the client PB.  After the client PB has loaded the recipe menus then recipe list will be displayed on the main screen.
+1) Run the server PB and wait for the message 'Cache initialisation complete', then launch the client PB.  After the client PB has loaded the recipe menus then the recipe list will be displayed on the main screen.
 
 2) Filter the content of the recipe list using the 4 buttons below the list (All/Elements/Consumable/Parts)
 
@@ -42,21 +46,31 @@ The UI should be relatively straight forward.
 
 8) you can add the current market prices for ores (via LUA parameters on the client PB) and these will be used to calculate the recipe cost
 
-# Integrating with a stores monitor application
+# Mapping your factory containers to ingredients
 
-In the installation above we used a 'dummy' stores databank.  If you already have a LUA application that populates a databank with information about your factory stores, then this can be integrated with this recipe application.  Doing so will provide additional information for ingredient - the quantity of that ingredient you have in stores.
+Doing so will provide additional information for ingredient - the quantity of that ingredient you have in stores.
 
-To integrate:
+To integrate (this requires a little knowledge of how to edit LUA code in a programming board in DU):
 
-1) replace the stores databank with your own stores databank
-
-2) edit the LUA code in the UI PB. Access the unit.start code (with the first line: 'stringMap={}').  Scroll down though this LUA code until you reach the section containing 'storeMap'.  'storeMap' is a mapping between the internal names that the recipe application uses and the content of your stores databank.  For example the line:
+1) edit the LUA code in the client PB. Access the unit.start code (with the first line: 'stringMap={}').  Scroll down though this LUA code until you reach the section containing 'storeMap'.  'storeMap' is a mapping between the internal names that the recipe application uses and the names of your factory containers.  For example the line:
 
 storeMap["Bsc RobA S"]="sbroboticarm"
 
-maps the 'Basic Robotic Arm S' recipe in the application with a variable in my stores databank called "sbroboticarm".
+maps the 'Basic Robotic Arm S' recipe in the application with a container in your factory called "sbroboticarm".
 
-# Good Luck
+You will also need to provide information regarding the factory containers and their content.  To do this scroll further down through the LUA code until you reach a line containing 'setupMaterialIndex'.  This table contains information about the containers in your factory.  For example:
+
+setupMatierialIndex("sbroboticarm",{100, "s",0,20})
+
+identifies a container named 'sbroboticarm' which is of size "s", the items in this container have a mass of 100 (each unit), 0 is the default stock (do not change this, always leave it as 0) - you can forget about the last value in this table as they are from a legacy implementation of my factory monitoring application.
+
+n.b. in a future version of this application I will remove the need to enter the item mass in this table by taking it directly from the recipe for each item.
+
+# Known Issues
+
+Users upgrading from a previous version of the recipe application will need to check the links on the client PB since these have changed in version 1_3_0.  They need to be core, menudb, screen1, screen2, screen3, commsdb - in this order.  If you are unsure, then remove the client PB and replace it following the installation instruction from 6 onwards.
+
+Some users have identified that they do not have a copy of dksjon.lua in their library folder.  This can be provided on request if you dont have it.
 
 # Version
 
@@ -68,7 +82,7 @@ maps the 'Basic Robotic Arm S' recipe in the application with a variable in my s
 
 1_2_0:  1) this pre-release update allows user to input (via LUA Parameters) their Productivity Talent Levels.  The cost (ore costs) displayed are for a single litre/unit of the recipe product with the productivity bonus applied.  I have so far implemented Productivity Talents for all recipe except Scrap and Honeycomb.  Talent Productivity Levels can be changed via the LUA Parameters on the Server PB.
 
-1_3_0:  1) Contains the new (DU 0.23) Uncommon, Advanced and Rare industries and XL containers
+1_3_0:  1) The database now contains the new (DU 0.23) Uncommon, Advanced and Rare industries and XL containers, to load these you will need to redownload the latest database file and follow the installation instruction 2 and 3 above; 2) I have provided LUA Parameters so that users can change the Recipe Panel Background Colour, the Ingredient Panel Background Colour, the Panel Font Colour and the Highlight Line colour; 3) The schematic list now scans your factory for any loaded schematics and lists these against each requirement telling you if you already have this schematic somewhere in your factory; 4) I have removed the 'stores databank' from previous versions of this application and integrated the container monitoring code.  Therefore, if you follow the instructions in the 'Mapping your factory containers to ingredients' section above then the application will display the number of ingredients that you have in stores against each requirement.
 
 
 
