@@ -5,7 +5,7 @@ This LUA suite of applications provides a list of all DU recipes, displays their
 
 # Latest Version
 
-The latest support version is 1_3_0
+The latest support version is 1_3_1
 
 # Installation:
 (it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank: if you dont have a stores databank in your factory simply use an another empty database).
@@ -85,6 +85,8 @@ I believe that the time data for the new uncommon, advanced and rare industry re
 1_2_0:  1) this pre-release update allows user to input (via LUA Parameters) their Productivity Talent Levels.  The cost (ore costs) displayed are for a single litre/unit of the recipe product with the productivity bonus applied.  I have so far implemented Productivity Talents for all recipe except Scrap and Honeycomb.  Talent Productivity Levels can be changed via the LUA Parameters on the Server PB.
 
 1_3_0:  1) The database now contains the new (DU 0.23) Uncommon, Advanced and Rare industries and XL containers, to load these you will need to redownload the latest database file and follow the installation instruction 2 and 3 above; 2) I have provided LUA Parameters so that users can change the Recipe Panel Background Colour, the Ingredient Panel Background Colour, the Panel Font Colour and the Highlight Line colour; 3) The schematic list now scans your factory for any loaded schematics and lists these against each requirement telling you if you already have this schematic somewhere in your factory; 4) I have removed the 'stores databank' from previous versions of this application and integrated the container monitoring code.  Therefore, if you follow the instructions in the 'Mapping your factory containers to ingredients' section above then the application will display the number of ingredients that you have in stores against each requirement.
+
+1_3_1: 1) Bug fix for recipe data for Limestone and Natron; 2) Added productivity talents for Ore refining in addition to Pures as I missed this in 1_3_0; 3) included Warp Cells in Consumables Menu
 
 
 
