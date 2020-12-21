@@ -5,7 +5,7 @@ This LUA suite of applications provides a list of all DU recipes, displays their
 
 # Latest Version
 
-The latest support version is 1_3_1 - note, version 1_4_0 is a work in progress, use at your own risk and refer to the notes relating to this release.
+The latest support version is 1_4_0
 
 # Installation:
 (it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank: if you dont have a stores databank in your factory simply use an another empty database).
@@ -72,7 +72,7 @@ Users upgrading from a previous version of the recipe application will need to c
 
 Some users have identified that they do not have a copy of dksjon.lua in their library folder.  This can be provided on request if you dont have it.
 
-I believe that the time data for the new uncommon, advanced and rare industry recipes is incorrect - appologies, I will fix it soon.
+I believe that the time data for the new uncommon, advanced and rare industry recipes is incorrect - appologies, I will fix it soon.  There may  also be a few incorrect mass/volume data in some of the newer recipes.  Please, if you notice any specificy data error, report them to me and I will endeavor to fix them.
 
 # Version
 
@@ -88,7 +88,7 @@ I believe that the time data for the new uncommon, advanced and rare industry re
 
 1_3_1: 1) Bug fix for recipe data for Limestone and Natron; 2) Added productivity talents for Ore refining in addition to Pures as I missed this in 1_3_0; 3) included Warp Cells in Consumables Menu
 
-1_4_0: 1) adding the new adv/rar components needed to support the new tiered industries and the new adv/rare atmo/space engines;  2) a consequence of 1 is that I have needed to rework the menu handling routines as there are now arond 1000 recipes and the menu databank became full and so wouldnt work.
+1_4_0: 1) added the new unc/adv/rar components needed to support the new tiered industries and the new adv/rare atmo/space engines;  2) a consequence of 1 is that I have needed to rework the menu handling routines as there are now around 1000 recipes and the menu databank became full and so wouldnt work.
 
 
 
