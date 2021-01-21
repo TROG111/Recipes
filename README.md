@@ -22,9 +22,9 @@ You will also need to make sure that you have the dkjson.lua libary script in yo
 
 5) Next copy the content of the latest Server file in this repository (again using the LUA Paste Cope in game function) into the second PB (server PB).
 
-6) Finally, we need to link the screens and databanks to the third PB, in the following order: core,  menu databank, screen 1, 2, 3, and the cooms databank
+6) Finally, we need to link the screens and databanks to the third PB, in the following order: core,  menu databank, screen 1, 2, 3, and the comms databank
 
-7) Then copy the content of the latest Client file in this repository (again using the LUA Paste Cope in game function) into the third PB (client PB).
+7) Then copy the content of the latest Client file in this repository (again using the LUA Paste Copy in game function) into the third PB (client PB).
 
 # Running the Application
 
@@ -70,7 +70,7 @@ n.b. in a future version of this application I will remove the need to enter the
 
 Users upgrading from a previous version of the recipe application will need to check the links on the client PB since these have changed in version 1_3_0.  They need to be core, menudb, screen1, screen2, screen3, commsdb - in this order.  If you are unsure, then remove the client PB and replace it following the installation instruction from 6 onwards.
 
-Some users have identified that they do not have a copy of dksjon.lua in their library folder.  This can be provided on request if you dont have it.
+Some users have identified that they do not have a copy of dksjon.lua in their library folder.  This can be provided on request if you dont have it - although it is part of the standard DU installation.
 
 I believe that the time data for the new uncommon, advanced and rare industry recipes is incorrect - appologies, I will fix it soon.  There may  also be a few incorrect mass/volume data in some of the newer recipes.  Please, if you notice any specificy data error, report them to me and I will endeavor to fix them.
 
