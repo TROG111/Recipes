@@ -5,10 +5,10 @@ This LUA suite of applications provides a list of all DU recipes, displays their
 
 # Latest Version
 
-The latest support version is 1_4_0
+The latest support version is 1_5_0
 
 # Installation:
-(it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank, a final databank - the stores databank: if you dont have a stores databank in your factory simply use an another empty database).
+(it is very important that you link all databanks in the correct order for each PB, therefor I suggest arranging the databanks in the following order: a group of 8 databanks - the database, a single databank - the menu databank, another single databank - the comms databank.
 
 You will also need to make sure that you have the dkjson.lua libary script in your DU lua library.
 
@@ -88,7 +88,9 @@ I believe that the time data for the new uncommon, advanced and rare industry re
 
 1_3_1: 1) Bug fix for recipe data for Limestone and Natron; 2) Added productivity talents for Ore refining in addition to Pures as I missed this in 1_3_0; 3) included Warp Cells in Consumables Menu
 
-1_4_0: 1) added the new unc/adv/rar components needed to support the new tiered industries and the new adv/rare atmo/space engines;  2) a consequence of 1 is that I have needed to rework the menu handling routines as there are now around 1000 recipes and the menu databank became full and so wouldnt work.
+1_4_0: 1) added the new unc/adv/rar components needed to support the new tiered industries and the new adv/rare atmo/space engines;  2) a consequence of 1 is that I have needed to rework the menu handling routines as there are now around 1000 recipes and the menu databank became full and so wouldnt work. 3) some people were experiencing problems with the link order to the client PB so I have checked and refreshed these to ensure that they are correct.
+
+1_5_0: this is a release of the database (to fix some incorrect and/or missing recipes and changes to the server to support multiple clients - which is used in the Production Line monitoring  and ship valuation scripts.
 
 
 
